@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Log In page {% endblock title %}
+{% block content %}
+    <h2> Log In </h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+    <!-- old button without green color <button type="submit">Confirm</button> -->
+    <!-- new green colored button -->
+    <button class="btn btn-success ml-2" type="submit">Log in</button>
+
+    </form>
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="article-entry">
+        <h2>{{ object.title }}</h2>
+            <p> {{ object.author }} | {{ object.date }}</p>
+            <p> {{ object.body }}</p>
+            <p> Comments on this article</p>
+            {% for comment in article.comments.all %}
+                    <p>
+                        <span class="font-weight-light">{{ comment.author }} &middot; </span>
+                        {{ comment }}
+                    </p>
+            {% endfor %}
+    </div>
+
+    <p> <a href="{% url 'article_edit' article.pk %}">Edit</a>|
+        <a href="{% url 'article_delete' article.pk  %}">Delete</a>
+    </p>
+    <p> Return to <a href="{% url 'article_list' %}">All Articles</a></p>
+
+{% endblock content %}
