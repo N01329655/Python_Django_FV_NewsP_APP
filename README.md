@@ -1,6 +1,6 @@
 # Python_Django_FV_NewsP_APP
 
-The project "Newspaper app" was built according to book and aimed to improve my skills in using Django in the development.
+The project "Newspaper app" aimed to improve my skills in using Django in the development.
 
 
 The "Newspaper app" has a straightforward interface for new users the web application gives an option to create a new account, whereas
